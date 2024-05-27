@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@200&display=swap');
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background: #010217;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Anuphan", sans-serif;
+  color: #fff;
+  /* Improved text contrast */
+}
+
+.border {
+  border-radius: 4px;
+  height: 89vh;
+  width: 85vw;
+  background-color: #fdfdfd;
+}
+
+.card {
+  margin-top: 3px;
+  margin-left: 3px;
+  background: url('../img/686.png');
+  background-size: cover;
+  border-radius: 4px;
+  height: 85vh;
+  width: 80vw;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* Adjusted box shadow for depth */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+
+  .card img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+  }
+}
+
+img.fourmouth {
+  border-radius: 12px;
+  max-height: 40vh;
+}
+
+.text {
+  padding: 1em;
+  /* Adjusted text color */
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+.space {
+  height: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out;
+  /* Adjust the animation duration and timing function as needed */
+}
